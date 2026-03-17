@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Poquito De Todo - Estilo Antiguo</title>
+    <style>
+        /* Estilos Base - Fondo más oscuro para que resalte la carta */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            /* Fondo tipo mesa de madera oscura */
+            background-color: #2c1a0b;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%233a2510' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H2V1z'%3E%3C/path%3E%3C/svg%3E");
+            font-family: 'Georgia', Times, serif; /* Fuente con serifa para estilo antiguo */
+            padding: 20px;
+        }
+
+        /* Contenedor de la Carta Quemada */
+        .card {
+            /* Fondo color pergamino */
+            background-color: #f2e1b9;
+            /* Textura de papel viejo y manchas (generado con CSS) */
+            background-image: 
+                radial-gradient(farthest-side at 20% 30%, rgba(100, 50, 10, 0.1), transparent),
+                radial-gradient(farthest-side at 80% 70%, rgba(150, 100, 50, 0.15), transparent),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            
+            width: 100%;
+            max-width: 500px;
+            padding: 50px 40px;
+            
+            /* Bordes irregulares asimétricos */
+            border-radius: 20px 5px 15px 8px / 10px 15px 8px 20px;
+            
+            /* Sombra compleja para efecto quemado y ceniza */
+            box-shadow: 
+                0 10px 30px rgba(0,0,0,0.5), /* Sombra proyectada */
+                inset 0 0 15px rgba(139, 69, 19, 0.3), /* Tostado interno suave */
+                0 0 0 2px #3d2611, /* Borde quemado oscuro */
+                0 0 10px 4px rgba(20, 10, 0, 0.8); /* Efecto carbonizado exterior */
+            
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+            
+            /* Importante para el efecto de borde irregular quemado */
+            border: 1px solid transparent; 
+            filter: drop-shadow(0 0 2px rgba(0,0,0,0.8));
+        }
+
+        /* Efecto ceniza en los bordes con pseudo-elemento */
+        .card::after {
+            content: "";
+            position: absolute;
+            top: -5px; left: -5px; right: -5px; bottom: -5px;
+            border-radius: inherit;
+            pointer-events: none;
+            /* Simula bordes mordidos por el fuego */
+            box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.7);
+            filter: blur(2px);
+            z-index: -1;
+        }
+
+        .card:hover {
+            transform: translateY(-5px) rotate(1deg);
+        }
+
+        /* Tipografía */
+        h1 {
+            color: #4a3121; /* Marrón oscuro, no negro puro */
+            font-size: 1.9rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 0px rgba(255,255,255,0.3);
+        }
+
+        p {
+            color: #5d4037; /* Marrón tono medio */
+            line-height: 1.8; /* Más espacio entre líneas para lectura */
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+            text-align: justify; /* Justificado queda mejor en pergamino */
+            hyphens: auto; /* Ayuda al justificado */
+            white-space: pre-line; /* Respeta los saltos de línea de tu texto */
+        }
+
+        .signature {
+            /* Fuente manuscrita para la firma */
+            font-family: 'Courier New', Courier, monospace; /* O una cursive si prefieres */
+            font-style: italic;
+            color: #8e241c; /* Rojo óxido/sangre seca */
+            font-size: 1.5rem;
+            margin-top: 30px;
+            display: block;
+            font-weight: bold;
+            text-shadow: 1px 1px 0px rgba(255,255,255,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Para Mi Novia Hermosa</h1>
+        <p>
+            Hola amor la verdad nose cómo empezar está carta, pues nunca había hecho una pero bueno.
+
+            La verdad en estos 2 años de conocernos (7 meses de novios), Todo este tiempo he aprendido lo que es amar y ser amado por una persona que además de saber amarme, Dame confianza, Cariño, Lealtad a sido un complemento en mi vida.
+
+            La primera vez que te ví, fue como un amor a primera vista y pensé que nunca más te volvería a ver, mientas más transcurría los primeros días que nos vimos se sentía algo demasiado especial como si todo estuviera ya escrito, el primer beso que nos dimos no sabes la felicidad con la que me fuí que en todo el viaje no dejaba de pensar e imaginar lo que habia sido.
+
+            Pedirte que fueras mi novia no fue algo tan sencillo, ya que a medida que más lo pensaba sentía un mar de nervios por lo que de pronto fueras a decir, ya después, ya después que compre todo venia la parte más difícil que era decorar la pieza, ya que de lo nervioso y ansioso que estaba no pensaba bien las cosas, ya cuando te ví ingresar que volviste a salirte de la pieza pensé que no te había gustado (nose porque), ya luego que te ví con los ojos aguados casi llorando, supe que había tomado la mejor decisión.
+
+            Pues nada solo decirte que Te amo como no te llegas a imaginas, todo este tiempo en sido el hombre más feliz ojalá usted también, a pesar de las peleas y todo lo que pase mi amor por tí nunca cambia sino que aumenta por montones
+        </p>
+        
+        <span class="signature">Te Amo Demasiado Mi Vida</span>
+    </div>
+
+</body>
+</html>
